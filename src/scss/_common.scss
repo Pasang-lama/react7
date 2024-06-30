@@ -1,0 +1,26 @@
+@import "variable";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+ul{
+    list-style: none !important;
+}
+.section-heading{
+    text-align: center;
+    color:$secondary-color;
+    margin-bottom: 30px !important;
+    font-size: 24px !important;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,33 @@
+.top-header{
+    background-color: #088F33;
+    .text-center{
+        @media(max-width:1200px){
+            text-align: end !important;
+        }
+    }
+}
+.navbar{
+    background-color: $secondary-color;
+    .navbar-brand img{
+        height: 150px;
+        width: fit-content;
+        position: absolute;
+        top: -48px;
+        border: 3px solid $primary-color;
+        z-index: 1;
+        @media(max-width:1200px){
+            top: -96px;
+        }
+        @media(max-width:991px){
+            top: -42px;
+        }
+    }
+    .navbar-nav{
+        gap: 30px;
+        @media(max-width:1200px){
+            gap: 10px;
+        }
+    }
+}
+
+//  default root value 10px === 1rem 2rem => 32px 
