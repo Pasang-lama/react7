@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/plannepal.gif'
-
+import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <header>
@@ -39,10 +39,10 @@ const Header = () => {
                   <a className="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"> About Us</a>
+                  <Link className="nav-link" to="/about"> About Us</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"> Nepal</a>
+                  <Link className="nav-link" to="/nepal"> Nepal</Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#"> Tibet</a>
@@ -60,7 +60,7 @@ const Header = () => {
                   <a className="nav-link" href="#">Day Tours</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contact Us</a>
+                  <Link className="nav-link" to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
