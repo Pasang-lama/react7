@@ -2,9 +2,17 @@ import Banner from "./component/Banner"
 import Footer from "./component/Footer"
 import Header from "./component/Header"
 import Tourspecialcard from "./component/Tourspecialcard"
+
+function Featurepackagelist(props){
+  return(
+    <li><a href={props.list.url}><i className="bi bi-arrow-right pe-2" /> {props.list.packagename}</a></li>
+  )
+}
+
+
+
+
 function App() {
-
-
   var specialtour = [
     {
       id: 1,
@@ -21,6 +29,30 @@ function App() {
       image: "https://www.plannepal.com/assets/img/our-specialities/flight-book.jpg?ver=1465419604",
       title: "Flight Booking"
     },
+  ]
+
+
+  var feturelist = [
+    {
+      id: 1,
+      packagename : "Nepal Faily Holiday",
+      url : "https://www.plannepal.com/nepal/tour/nepal-family-tour"
+    },
+    {
+      id: 2,
+      packagename : "Nepal Vacation Tour",
+      url : "https://www.plannepal.com/nepal/tour/nepal-family-tour"
+    },
+    {
+      id: 3,
+      packagename : "Nepal Faily Holiday",
+      url : "https://www.plannepal.com/nepal/tour/nepal-family-tour"
+    },
+    {
+      id: 4,
+      packagename : "Nepal Vacation Tour",
+      url : "https://www.plannepal.com/nepal/tour/nepal-family-tour"
+    }
   ]
   return (
     <>
@@ -43,12 +75,11 @@ function App() {
           <div className="col-lg-3 col-md-12 ">
             <h2>FEATURED PACKAGES</h2>
             <ul>
-              <li><a href><i className="bi bi-arrow-right pe-2" /> Nepal Vacation Tour</a></li>
-              <li><a href> <i className="bi bi-arrow-right pe-2" /> Sunrise/Sunset Tour</a></li>
-              <li><a href> <i className="bi bi-arrow-right pe-2" /> Chitwan Safari Tour</a></li>
-              <li><a href><i className="bi bi-arrow-right pe-2" /> Kathmandu Valley Trek</a></li>
-              <li><a href><i className="bi bi-arrow-right pe-2" /> Bhutan Tour Package</a></li>
-              <li><a href> <i className="bi bi-arrow-right pe-2" /> Tibet Tour Package</a></li>
+       {
+        feturelist.map((item)=>{
+          return <Featurepackagelist list={item}/>
+        })
+       }
             </ul>
           </div>
         </div>
